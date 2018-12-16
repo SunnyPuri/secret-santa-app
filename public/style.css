@@ -1,0 +1,140 @@
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    17% {
+        background-color: #3cc
+    }
+
+    34% {
+        background-color: #66bf39
+    }
+
+    51% {
+        background-color: #ffa602
+    }
+
+    67% {
+        background-color: #eb670f
+    }
+
+    84% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+.animated-background {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 20s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    background-color: #45a3e5
+}
+
+.animated-background--fast {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s
+}
+
+body {
+    height: 100vh;
+}
+
+.main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section{
+    max-width: 250px;
+    width: 100%;
+}
+
+.otp-btn{
+    margin: 10px 0;
+    background: rgba(0,0,0,.3);
+    border-color: #fff;
+}
+
+.otp{
+    margin: 10px 0;
+}
+
+.phone, .otp-btn, .otp{
+    border-radius: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus,
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color:rgba(0,0,0,.3);
+    border-color: rgba(0,0,0,.6);
+    box-shadow: 0 0 0 0.1rem rgba(0,0,0,.3);
+}
+
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    z-index: 2;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.spinner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+}
+
+.hide{
+    display: none;
+}
+
+#result{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+canvas#birthday {
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+}
